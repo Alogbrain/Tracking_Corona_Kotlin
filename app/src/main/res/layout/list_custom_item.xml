@@ -74,7 +74,7 @@
             android:layout_above="@+id/tvCountryName"
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
-            android:layout_marginLeft="-14dp"
+            android:layout_marginLeft="1dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
             android:layout_toRightOf="@+id/affectedCt"
@@ -87,12 +87,12 @@
 
         <TextView
             android:id="@+id/recoveredCt"
-            android:layout_width="67dp"
+            android:layout_width="92dp"
             android:layout_height="match_parent"
             android:layout_above="@+id/tvCountryName"
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
+            android:layout_marginLeft="4dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
             android:layout_toRightOf="@+id/activeCtDaily"
@@ -170,23 +170,23 @@
             android:textColor="@color/dark_yellow"
              />
 
-        <TextView
-            android:id="@+id/recoveTg"
-            android:layout_width="134dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_gravity="bottom"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginBottom="0dp"
-            android:layout_toEndOf="@+id/affectedtg"
-            android:layout_toRightOf="@+id/affectedtg"
-            android:gravity="center"
-            android:text="Hồi phục"
-            android:textColor="@color/dark_green"
-            android:textSize="15dp"
+            <TextView
+                android:id="@+id/recoveTg"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/affectedtg"
+                android:layout_toRightOf="@+id/affectedtg"
+                android:gravity="center"
+                android:text="Hồi phục"
+                android:textColor="@color/dark_green"
+                android:textSize="15dp"
 
-             />
+                />
 
             <TextView
                 android:id="@+id/affectTg"

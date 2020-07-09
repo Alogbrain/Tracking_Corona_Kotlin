@@ -10,20 +10,22 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:layout_marginTop="32dp"
-            android:text="Covid-19"
+            android:text="Thông tin phòng bệnh"
             android:textColor="#1E1010"
             android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginEnd="16dp"
@@ -35,26 +37,25 @@
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
+            android:layout_width="336dp"
+            android:layout_height="68dp"
             android:layout_marginTop="16dp"
             android:lineSpacingExtra="4sp"
-            android:text="Nếu bạn cảm thấy bị bệnh với bất kỳ triệu chứng covid-19\nvui lòng gọi cho bạn hoặc SMS để được giúp đỡ ngay lập tức."
+            android:text="Nếu bạn cảm thấy bị bệnh với bất kỳ triệu chứng covid-19  vui lòng gọi cho bạn hoặc SMS để được giúp đỡ ngay lập tức."
             android:textColor="#1E1010"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="44dp"
-            android:text="Bạn có cảm thấy như bị bệnh không?"
-            android:textColor="#1E1010"
+            android:layout_width="335dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="24dp"
+            android:text="Bạn có đang khỏe mạnh không?"
+            android:textColor="@color/dark_green"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -63,16 +64,14 @@
             android:id="@+id/btnCall"
             android:layout_width="142dp"
             android:layout_height="40dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/call_button"
             android:drawableLeft="@drawable/ic_phone"
             android:drawablePadding="8dp"
             android:paddingLeft="16dp"
             android:text="Gọi ngay"
             android:textAllCaps="false"
-            android:textColor="#1E1010"
+            android:textColor="#fff"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/btnMes"
             app:layout_constraintHorizontal_bias="0.5"
@@ -96,11 +95,12 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/btnCall"
             app:layout_constraintTop_toTopOf="@+id/btnCall" />
+
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="20dp"
             android:text="Hướng dẫn phòng dịch"
             android:textColor="#1E1010"
             android:textSize="20sp"

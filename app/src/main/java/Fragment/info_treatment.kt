@@ -1,6 +1,7 @@
 package Fragment
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,9 +11,14 @@ import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.tracking_corona.*
+import kotlinx.android.synthetic.main.fragment_info.*
+
 
 
 class info_treatment : Fragment() {
+    lateinit var btn_call: Button
+    lateinit var btn_sms: Button
+
     lateinit var btn_guide_student: Button
     lateinit var btn_guide_school: Button
     lateinit var btn_guide_travel: Button
@@ -33,6 +39,9 @@ class info_treatment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        btn_call = view?.findViewById<Button>(R.id.btnCall)
+        btn_sms = view?.findViewById<Button>(R.id.btnMes)
+
         btn_guide_student = view?.findViewById<Button>(R.id.btn_guide_student)
         btn_guide_school = view?.findViewById<Button>(R.id.btn_guide_school)
         btn_guide_travel = view?.findViewById<Button>(R.id.btn_guide_travel)
@@ -41,6 +50,17 @@ class info_treatment : Fragment() {
         btn_guide_workspace = view?.findViewById<Button>(R.id.btn_guide_workspace)
         btn_guide_family = view?.findViewById<Button>(R.id.btn_guide_family)
         btn_guide_service = view?.findViewById<Button>(R.id.btn_guide_service)
+
+        btn_call.setOnClickListener {
+            val callIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:19009095"))
+            startActivity(callIntent)
+        }
+
+        btn_sms.setOnClickListener {
+            val callIntent = Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:1900.9095"))
+            startActivity(callIntent)
+        }
+
 
         btn_guide_student.setOnClickListener {
             val popupMenu: PopupMenu = PopupMenu(getContext(), btn_guide_student)
