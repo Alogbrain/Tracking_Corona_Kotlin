@@ -258,12 +258,24 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/listheader"
-            android:layout_marginBottom="16dp"
-            tools:listheader="@layout/list_header" />
+            android:layout_below="@+id/listheader">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                tools:listheader="@layout/list_header" />
+            <com.leo.simplearcloader.SimpleArcLoader
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/loader"
+                app:arc_style="simple_arc"
+                android:visibility="visible"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
     </RelativeLayout>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
