@@ -14,10 +14,10 @@ class ActivityBrowser: AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_browser)
+        setTitle("Thông tin phòng bệnh");
         webView = findViewById(R.id.webView)
         val url = intent.getStringExtra("url")
         webView.settings.javaScriptEnabled = true
         webView.loadUrl(url)
     }
-
 }
