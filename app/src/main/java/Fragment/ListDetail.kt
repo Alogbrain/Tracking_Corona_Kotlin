@@ -31,6 +31,7 @@ class ListDetail : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        loader.start()
         fetchData()
         swipeToRefresh.setOnRefreshListener {
             fetchData()
@@ -53,6 +54,9 @@ class ListDetail : Fragment() {
 
             rv.layoutManager    = layoutmanager
             rv.adapter          = detailCountryAdapter
+
+            loader.stop()
+            loader.setVisibility(View.GONE)
         }
     }
     override fun onDestroy() {
