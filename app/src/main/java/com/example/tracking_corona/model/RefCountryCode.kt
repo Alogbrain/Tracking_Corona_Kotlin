@@ -1,4 +1,4 @@
-package com.example.tracking_corona.model.CountryMap
+package com.example.tracking_corona.model
 
 import com.google.gson.annotations.SerializedName
 

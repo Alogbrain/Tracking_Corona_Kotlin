@@ -1,22 +1,15 @@
 package Fragment.map
 
-import Fragment.Tracking
 import Fragment.view.InfoAdapterCustom
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.example.tracking_corona.R
 import com.example.tracking_corona.databinding.FragmentMapsBinding
-import com.example.tracking_corona.model.CountrysReport
-import com.example.tracking_corona.service.ApiCountrysReport
-import com.example.tracking_corona.service.CountriesService
 import com.example.tracking_corona.service.MapService
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException
 import com.google.android.gms.maps.*
@@ -28,12 +21,10 @@ class Map: Fragment(), OnMapReadyCallback {
     companion object{
         private val TAG ="MapFragment"
     }
-    private lateinit var dashboardViewModel: MapViewModel
     private lateinit var binding:FragmentMapsBinding
     lateinit var scope: CoroutineScope;
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        dashboardViewModel = ViewModelProvider(activity!!).get(MapViewModel::class.java)
         binding = DataBindingUtil.inflate(layoutInflater,R.layout.fragment_maps, container, false)
         return binding.root
     }

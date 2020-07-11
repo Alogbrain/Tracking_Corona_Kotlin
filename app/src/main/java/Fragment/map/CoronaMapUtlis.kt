@@ -1,8 +1,8 @@
 package Fragment.map
 
 import android.content.Context
-import com.example.tracking_corona.model.CountryMap.CountryLatLong
-import com.example.tracking_corona.model.CountryMap.RefCountryCode
+import com.example.tracking_corona.model.CountryLatLong
+import com.example.tracking_corona.model.RefCountryCode
 import com.example.tracking_corona.model.CountrysReport
 import com.google.android.gms.maps.model.LatLng
 import com.google.gson.Gson
@@ -17,7 +17,8 @@ class CoronaMapUtlis(val context: Context) {
     }
 
     fun findLatlong(countryList:List<CountrysReport>): List<CountrysReport> {
-        val objs = Gson().fromJson(countrysString(),CountryLatLong::class.java)
+        val objs = Gson().fromJson(countrysString(),
+            CountryLatLong::class.java)
         countryList.forEach { countrysReport: CountrysReport ->
             objs.refCountryCodes?.forEach { refCountryCode: RefCountryCode ->
 
