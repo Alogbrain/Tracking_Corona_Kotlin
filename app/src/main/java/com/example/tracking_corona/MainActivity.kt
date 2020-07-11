@@ -1,15 +1,13 @@
 package com.example.tracking_corona
 
 import Fragment.ListDetail
-import Fragment.map.Map
 import Fragment.Tracking
 import Fragment.info_treatment
-import android.os.Build
+import Fragment.map.Map
 import android.os.Bundle
-import androidx.annotation.RequiresApi
+import android.view.KeyEvent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -25,28 +23,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
         replaceFragment(Tracking())
 
-//        viewPager = findViewById(R.id.viewPager)
 
-//        val fragmentAdapter  =
-//            ViewAdapter(supportFragmentManager)
-//        viewPager.adapter= fragmentAdapter
-//        viewPager?.addOnPageChangeListener(object : ViewPager.OnPageChangeListener{
-//            override fun onPageScrollStateChanged(state: Int) {
-//            }
-//
-//            override fun onPageScrolled(
-//                position: Int,
-//                positionOffset: Float,
-//                positionOffsetPixels: Int
-//            ) {
-//            }
-//
-//            @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-//            override fun onPageSelected(position: Int) {
-//                bottomNavigationView.menu.getItem(position).isChecked = true
-//            }
-//
-//        })
         bottomNavigationView =findViewById(R.id.navBottom)
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId){
@@ -84,5 +61,10 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.commit()
     }
 
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        return if (keyCode == KeyEvent.KEYCODE_BACK) {
+            true
+        } else super.onKeyDown(keyCode, event)
+    }
 
 }
