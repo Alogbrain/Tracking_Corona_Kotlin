@@ -24,24 +24,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:gravity="center"
-            app:layout_constraintBottom_toBottomOf="@+id/textView3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView3"></LinearLayout>
-
         <TextView
             android:id="@+id/textView6"
             android:layout_width="336dp"
             android:layout_height="68dp"
             android:layout_marginTop="16dp"
             android:lineSpacingExtra="4sp"
-            android:text="Nếu bạn cảm thấy bị bệnh với bất kỳ triệu chứng covid-19  vui lòng gọi cho bạn hoặc SMS để được giúp đỡ ngay lập tức."
+            android:text="Nếu bạn cảm thấy cơ thể có bất kỳ triệu chứng nào của COVID-19 vui lòng gọi cho chúng tôi hoặc gởi tin nhắn để nhận được giúp đỡ ngay lập tức."
             android:textColor="#1E1010"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -273,7 +262,7 @@
             android:background="#D4F4FC"
             android:paddingLeft="10dp"
             android:paddingRight="20dp"
-            android:text="Dành cho trường học"
+            android:text="Dành cho khu dịch vụ"
             android:textAllCaps="false"
             android:textColor="@color/cardblack"
             android:textSize="20dp"
